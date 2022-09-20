@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Tip Calculator</title>
+  </head>
+  <body>
+    <div id="container" class="card">
+      <h1 class="text-prim">Tip Calculator</h1>
+      <div id="calculator">
+        <form>
+          <div class="form-grp">
+            <label for="Bill" class="text-pr ">How Much Was Your Bill</label>
+            <input type="number" id="bill" required placeholder="Bill Amount" />
+          </div>
+          <div class="form-grp">
+            <label for="Bill" class="text-pr">How many people are sharing the Bill</label>
+            <input type="number" id="people" required placeholder="Number Of People" />
+          </div>
+          <h4 class="text-prim">How Was Your Service</h4>
+          <div class="input-field">
+            <select id="serviceq" required>
+              <option value="" disabled selected>Choose Your Option</option>
+              <option value="0">0%</option>
+              <option value="0.1">10% Good</option>
+              <option value="0.2">20% Great</option>
+              <option value="0.3">30% Outstanding</option>
+            </select>
+          </div>
+          <button class="btn" type="button" id="calculate">Calculate</button>
+        </form>
+      </div>
+      <ul id="result" class="text-sec">
+        <li>Tip: <span id="tip"></span></li>
+        <li>Total Bill: <span id="tb"></span></li>
+        <li>Tip/Person: <span id="tipP"></span></li>
+        <li>Total Bill With Tip: <span id="tbwt"></span></li>
+        <li>Total Bill With Tip/Person: <span id="tbpp"></span></li>
+
+      </ul>
+    </div>
+    <script src="/tip.js"></script>
+  </body>
+</html>
